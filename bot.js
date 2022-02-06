@@ -1,17 +1,17 @@
 const mineflayer = require("mineflayer");
 
 var settings = {
-    username: "TestMachine",
-    host: "localhost",
+    username: "silverbot",
+    host: "silversmp68Vf.aternos.me",
 };
 
 const bot = mineflayer.createBot(settings);
 
-bot.once("spawn", ()=>{
-    bot.chat("Hello everyone!");
+bot.once("spawn",greeting ()=>{
+    bot.chat("selamat datang di silver smp");
 });
 
-bot.on("move", ()=>{
+bot.on("spawn",greeting ()=>{
     let friend = bot.nearestEntity();
 
     if (friend) {
